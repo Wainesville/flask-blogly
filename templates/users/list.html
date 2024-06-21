@@ -4,9 +4,11 @@
     <h1>Users</h1>
 
     <ul>
-        {% for pet in pets %}
-        <li><a href="/user_detail">{{user.first_name}}{{user.last_name}}</a></li>
+        {% for user in users %}
+        <li><a href="/users/{{user.id}}">{{user.full_name}}</a></li>
         {% endfor %}
     </ul>
+
+    <button href="users/new">Add User</button>
 
 {% endblock %}
